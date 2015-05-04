@@ -1,0 +1,28 @@
+{
+  "name": "ios-uicatalog",
+  "version": "1.0.0",
+  "description": "Apple iOS UICatalog app",
+  "main": "apps.json",
+  "scripts": {
+    "install": "grunt default"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appium/ios-uicatalog.git"
+  },
+  "keywords": [
+    "appium",
+    "ios",
+    "uicatalog"
+  ],
+  "os": [
+    "darwin"
+  ],
+  "author": "",
+  "homepage": "https://github.com/appium/ios-uicatalog",
+  "dependencies": {
+    "appium-xcode": "^2.0.2",
+    "grunt": "^0.4.5",
+    "q": "^1.3.0"
+  }
+}
