@@ -1,10 +1,10 @@
 {
   "name": "ios-uicatalog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Apple iOS UICatalog app",
   "main": "apps.json",
   "scripts": {
-    "install": "grunt default"
+    "install": "node -e \"require('grunt').tasks(['default']);\""
   },
   "repository": {
     "type": "git",

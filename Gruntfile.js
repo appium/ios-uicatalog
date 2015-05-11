@@ -1,6 +1,6 @@
 var xcode = require('appium-xcode');
 var sdks = ['iphonesimulator', 'iphoneos'];
-var appPaths = require('.');
+var appPaths = require('./');
 var Q = require('q');
 var fs = require('fs');
 var renameFile = Q.denodeify(fs.rename);
