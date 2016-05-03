@@ -3,6 +3,7 @@
   "version": "1.0.2",
   "description": "Apple iOS UICatalog app",
   "main": "apps.json",
+  "license": "Apache-2.0",
   "scripts": {
     "install": "node -e \"require('grunt').tasks(['default']);\""
   },
