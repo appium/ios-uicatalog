@@ -135,8 +135,16 @@
     NSArray *args = [[NSProcessInfo processInfo] arguments];;
     NSString *argsString = [args componentsJoinedByString:@", "];
 
-    NSDictionary *env = [[NSProcessInfo processInfo] environment];
-    NSString *envString = @"";
+    NSDictionary *env;
+    NSString *envString;
+    if ([args containsObject:@"USE_NSUSERDEFAULTS"]) {
+        env = [[NSUserDefaults standardUserDefaults] dictionaryRepresentation];
+        envString = @"(From NSUserDefaults)";
+    } else {
+        env = [[NSProcessInfo processInfo] environment];
+        envString = @"(From NSProcessInfo environment)";
+    }
+
     for (NSString *key in env) {
         id value = env[key];
         NSString *line = [NSString stringWithFormat:@"%@ => %@", key, value];
