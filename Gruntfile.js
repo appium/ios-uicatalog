@@ -85,23 +85,45 @@ module.exports = function(grunt) {
   grunt.registerTask('renameAll', 'renaming apps', function(path){ renameAll(this.async()) } );
   grunt.registerTask('cleanAll', 'cleaning', function() {
     var done = this.async();
-    xcode.getMaxIOSSDK().then(function(sdkVer) {
+    function runTasks (sdkVer) {
       getSdks().forEach(function (sdk) {
-        sdk = sdk+sdkVer;
-        grunt.task.run('clean:'+sdk);
+        sdk = sdk + sdkVer;
+        grunt.task.run('clean:' + sdk);
       });
+    }
+    xcode.getMaxIOSSDK().then(function(sdkVer) {
+      runTasks(sdkVer);
       done();
+    }).catch(function (err) {
+      console.log('Error getting max iOS SDK:', err.message);
+      if (process.env.PLATFORM_VERSION) {
+        console.log('Using process.env.PLATFORM_VERSION version:', process.env.PLATFORM_VERSION);
+        let sdkVer = process.env.PLATFORM_VERSION;
+        runTasks(sdkVer);
+        done();
+      }
     });
   });
 
   grunt.registerTask('buildAll', 'building', function() {
     var done = this.async();
-    xcode.getMaxIOSSDK().then(function(sdkVer) {
+    function runTasks (sdkVer) {
       getSdks().forEach(function (sdk) {
-        sdk = sdk+sdkVer;
-        grunt.task.run('build:'+sdk);
+        sdk = sdk + sdkVer;
+        grunt.task.run('build:' + sdk);
       });
+    }
+    xcode.getMaxIOSSDK().then(function(sdkVer) {
+      runTasks(sdkVer);
       done();
+    }).catch(function (err) {
+      console.log('Error getting max iOS SDK:', err.message);
+      if (process.env.PLATFORM_VERSION) {
+        console.log('Using process.env.PLATFORM_VERSION version:', process.env.PLATFORM_VERSION);
+        let sdkVer = process.env.PLATFORM_VERSION;
+        runTasks(sdkVer);
+        done();
+      }
     });
   });
 
