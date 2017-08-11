@@ -83,7 +83,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', 'build ios app', function(sdk) { buildApp('.', sdk, this.async()) } );
   grunt.registerTask('clean', 'cleaning', function(sdk) { cleanApp('.', sdk, this.async()) } );
   grunt.registerTask('renameAll', 'renaming apps', function(path){ renameAll(this.async()) } );
-  grunt.registerTask('cleanAll', 'cleaning', function() {
+  grunt.registerTask('cleanAll', 'cleaning', function () {
     var done = this.async();
     function runTasks (sdkVer) {
       getSdks().forEach(function (sdk) {
@@ -91,18 +91,28 @@ module.exports = function(grunt) {
         grunt.task.run('clean:' + sdk);
       });
     }
-    xcode.getMaxIOSSDK().then(function(sdkVer) {
-      runTasks(sdkVer);
-      done();
-    }).catch(function (err) {
-      console.log('Error getting max iOS SDK:', err.message);
-      if (process.env.PLATFORM_VERSION) {
-        console.log('Using process.env.PLATFORM_VERSION version:', process.env.PLATFORM_VERSION);
-        let sdkVer = process.env.PLATFORM_VERSION;
+    xcode.getMaxIOSSDK()
+      .then(function(sdkVer) {
         runTasks(sdkVer);
         done();
-      }
-    });
+      }).catch(function (err) {
+        // sometimes this fails on the first try for unknown reasons
+        console.log('Error getting max iOS SDK:', err.message);
+        console.log('Trying again...');
+        xcode.getMaxIOSSDK()
+          .then(function(sdkVer) {
+            runTasks(sdkVer);
+            done();
+          }).catch(function (err) {
+            console.log('Error getting max iOS SDK:', err.message);
+            if (process.env.PLATFORM_VERSION) {
+              console.log('Using process.env.PLATFORM_VERSION version:', process.env.PLATFORM_VERSION);
+              let sdkVer = process.env.PLATFORM_VERSION;
+              runTasks(sdkVer);
+              done();
+            }
+          });
+      });
   });
 
   grunt.registerTask('buildAll', 'building', function() {
