@@ -30,6 +30,9 @@ module.exports = function(grunt) {
 
     grunt.log.write("Building app...");
     var args = ['-sdk', sdk];
+    if (process.env.XCCONFIG_FILE) {
+      args.push('-xcconfig', process.env.XCCONFIG_FILE);
+    }
     xcode = spawn('xcodebuild', args, {
       cwd: appRoot,
     });
