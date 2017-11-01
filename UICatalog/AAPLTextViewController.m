@@ -150,8 +150,13 @@
         NSString *line = [NSString stringWithFormat:@"%@ => %@", key, value];
         envString = [NSString stringWithFormat:@"%@\n%@", envString, line];
     }
+    
+    NSString *language = [[NSLocale preferredLanguages] firstObject];
+    
+    NSLocale *locale = [NSLocale currentLocale];
+    NSString *countryCode = [locale objectForKey: NSLocaleCountryCode];
 
-    self.textView.text = [NSString stringWithFormat:@"PROCESS ARGUMENTS\n%@\n\nENVIRONMENT VARIABLES%@", argsString, envString];
+    self.textView.text = [NSString stringWithFormat:@"PROCESS ARGUMENTS\n%@\n\n\n\nENVIRONMENT VARIABLES\n%@\n\n\n\nLANGUAGE/LOCALE\n%@\n%@", argsString, envString, language, countryCode];
 }
 
 
