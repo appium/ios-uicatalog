@@ -1,4 +1,4 @@
-const xcode = require('appium-xcode');
+const xcode = require('appium-xcode').default;
 const appPaths = require('./');
 const B = require('bluebird');
 const fs = require('fs');

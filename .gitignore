@@ -1,3 +1,4 @@
 node_modules
 build
 *.xcuserdatad
+package-lock.json*
