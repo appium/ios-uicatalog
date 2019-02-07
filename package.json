@@ -2,12 +2,23 @@
   "name": "ios-uicatalog",
   "version": "1.2.0",
   "description": "Apple iOS UICatalog app",
-  "main": "apps.json",
+  "main": "index.js",
   "license": "Apache-2.0",
   "scripts": {
-    "install": "node -e \"require('grunt').tasks(['default']);\"",
-    "clean": "node -e \"require('grunt').tasks(['cleanAll']);\""
+    "clean": "rm -rf node_modules && rm -f package-lock.json && npm install",
+    "build": "gulp ios-apps:install",
+    "install": "gulp ios-apps:install",
+    "test": "gulp once",
+    "watch": "gulp watch",
+    "lint": "gulp lint",
+    "lint:fix": "gulp lint --fix",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
+    "precommit-test": "gulp lint"
   },
+  "pre-commit": [
+    "precommit-msg",
+    "precommit-test"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/appium/ios-uicatalog.git"
@@ -20,12 +31,27 @@
   "os": [
     "darwin"
   ],
+  "files": [
+    "gulpfile.js",
+    "index.js",
+    "lib",
+    "Test App 2",
+    "TestApp.xcodeproj"
+  ],
   "author": "",
   "homepage": "https://github.com/appium/ios-uicatalog",
   "dependencies": {
-    "appium-xcode": "^3.6.0",
-    "bluebird": "^3.5.1",
-    "grunt": "^1.0.3",
-    "rimraf": "^2.6.2"
+    "appium-gulp-plugins": "^3.6.1",
+    "gulp": "^4.0.0"
+  },
+  "devDependencies": {
+    "ajv": "^6.5.3",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.2.0",
+    "eslint-config-appium": "^4.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-mocha": "^5.0.0",
+    "eslint-plugin-promise": "^4.0.0",
+    "pre-commit": "^1.2.2"
   }
 }
