@@ -35,8 +35,8 @@
     "gulpfile.js",
     "index.js",
     "lib",
-    "Test App 2",
-    "TestApp.xcodeproj"
+    "UICatalog",
+    "UICatalog.xcodeproj"
   ],
   "author": "",
   "homepage": "https://github.com/appium/ios-uicatalog",
