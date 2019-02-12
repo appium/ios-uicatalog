@@ -1,5 +1,7 @@
 ## ios-uicatalog
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/appium/ios-uicatalog.svg)](https://greenkeeper.io/)
+
 A simple test application for iOS, used by [Appium](https://github.com/appium/appium)
 for certain tests. For more information, see the [docs]('./uicatalog-info.md').
 
