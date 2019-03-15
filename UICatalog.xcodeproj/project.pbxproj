@@ -125,7 +125,7 @@
 		5356823118F3656900BAAD62 = {
 			isa = PBXGroup;
 			children = (
-				3EC6487218FF8A5000024205 /* ReadMe.txt */,
+				3EC6487218FF8A5000024205 /* uicatalog-info.md */,
 				5356824318F3656900BAAD62 /* UICatalog */,
 				5356823C18F3656900BAAD62 /* Frameworks */,
 				5356823B18F3656900BAAD62 /* Products */,
@@ -301,7 +301,7 @@
 				5356825418F3656900BAAD62 /* Main_iPad.storyboard in Resources */,
 				53874F9918F36B1800510922 /* Localizable.strings in Resources */,
 				5356825918F3656900BAAD62 /* Images.xcassets in Resources */,
-				3EC6487318FF8A5000024205 /* ReadMe.txt in Resources */,
+				3EC6487318FF8A5000024205 /* uicatalog-info.md in Resources */,
 				5356825118F3656900BAAD62 /* Main_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
