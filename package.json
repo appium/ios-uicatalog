@@ -34,7 +34,6 @@
   "files": [
     "gulpfile.js",
     "index.js",
-    "ReadMe.txt",
     "uicatalog-info.md",
     "UICatalog",
     "UICatalog.xcodeproj"
