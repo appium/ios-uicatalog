@@ -35,7 +35,6 @@
     "gulpfile.js",
     "index.js",
     "uicatalog-info.md",
-    "lib",
     "UICatalog",
     "UICatalog.xcodeproj"
   ],
