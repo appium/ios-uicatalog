@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3EC6487318FF8A5000024205 /* uicatalog-info.md in Resources */ = {isa = PBXBuildFile; fileRef = 3EC6487218FF8A5000024205 /* uicatalog-info.md */; };
 		5356823E18F3656900BAAD62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5356823D18F3656900BAAD62 /* Foundation.framework */; };
 		5356824018F3656900BAAD62 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5356823F18F3656900BAAD62 /* CoreGraphics.framework */; };
 		5356824218F3656900BAAD62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5356824118F3656900BAAD62 /* UIKit.framework */; };
@@ -41,10 +40,11 @@
 		535682BE18F3670300BAAD62 /* AAPLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 535682A418F3670300BAAD62 /* AAPLWebViewController.m */; };
 		535682BF18F3670300BAAD62 /* UIColor+AAPLApplicationSpecific.m in Sources */ = {isa = PBXBuildFile; fileRef = 535682A618F3670300BAAD62 /* UIColor+AAPLApplicationSpecific.m */; };
 		53874F9918F36B1800510922 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53874F9718F36B1800510922 /* Localizable.strings */; };
+		6A6D665E224025E900670FE7 /* uicatalog-info.md in Resources */ = {isa = PBXBuildFile; fileRef = 3EC6487218FF8A5000024205 /* uicatalog-info.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3EC6487218FF8A5000024205 /* uicatalog-info.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uicatalog-info.md; sourceTree = SOURCE_ROOT; };
+		3EC6487218FF8A5000024205 /* uicatalog-info.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "uicatalog-info.md"; sourceTree = SOURCE_ROOT; };
 		5356823A18F3656900BAAD62 /* UICatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5356823D18F3656900BAAD62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5356823F18F3656900BAAD62 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -298,10 +298,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A6D665E224025E900670FE7 /* uicatalog-info.md in Resources */,
 				5356825418F3656900BAAD62 /* Main_iPad.storyboard in Resources */,
 				53874F9918F36B1800510922 /* Localizable.strings in Resources */,
 				5356825918F3656900BAAD62 /* Images.xcassets in Resources */,
-				3EC6487318FF8A5000024205 /* uicatalog-info.md in Resources */,
 				5356825118F3656900BAAD62 /* Main_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
