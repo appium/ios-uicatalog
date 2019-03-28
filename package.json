@@ -1,6 +1,6 @@
 {
   "name": "ios-uicatalog",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "description": "Apple iOS UICatalog app",
   "main": "index.js",
   "license": "Apache-2.0",
