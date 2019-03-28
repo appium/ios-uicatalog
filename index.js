@@ -4,13 +4,13 @@ const path = require('path');
 
 
 const relative = {
-  iphoneos: 'build/Release-iphoneos/UICatalog-iphoneos.app',
-  iphonesimulator: 'build/Release-iphonesimulator/UICatalog-iphonesimulator.app'
+  iphoneos: path.join('build', 'Release-iphoneos', 'UICatalog-iphoneos.app'),
+  iphonesimulator: path.join('build', 'Release-iphonesimulator', 'UICatalog-iphonesimulator.app'),
 };
 
 const absolute = {
-  iphoneos: path.resolve('build', 'Release-iphoneos', 'UICatalog-iphoneos.app'),
-  iphonesimulator: path.resolve('build', 'Release-iphonesimulator', 'UICatalog-iphonesimulator.app')
+  iphoneos: path.resolve(__dirname, 'build', 'Release-iphoneos', 'UICatalog-iphoneos.app'),
+  iphonesimulator: path.resolve(__dirname, 'build', 'Release-iphonesimulator', 'UICatalog-iphonesimulator.app'),
 };
 
 module.exports = {
