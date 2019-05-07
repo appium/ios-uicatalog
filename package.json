@@ -41,7 +41,7 @@
   "author": "",
   "homepage": "https://github.com/appium/ios-uicatalog",
   "dependencies": {
-    "appium-gulp-plugins": "^3.6.1",
+    "appium-gulp-plugins": "^4.0.0",
     "gulp": "^4.0.0"
   },
   "devDependencies": {
