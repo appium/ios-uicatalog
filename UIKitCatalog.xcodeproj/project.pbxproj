@@ -85,7 +85,7 @@
 		2200543918BC54F5002A6E8B /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TextViewController.swift; sourceTree = "<group>"; };
 		2200543A18BC54F5002A6E8B /* TintedToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TintedToolbarViewController.swift; sourceTree = "<group>"; };
 		2200543B18BC54F5002A6E8B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		228DB9F318BC53F1002BA12A /* UICatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		228DB9F318BC53F1002BA12A /* UIKitCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228DB9F718BC53F1002BA12A /* UIKitCatalog-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIKitCatalog-Info.plist"; sourceTree = "<group>"; };
 		228DBA0718BC53F1002BA12A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E5C084F1974991E00969DD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 		228DB9F418BC53F1002BA12A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				228DB9F318BC53F1002BA12A /* UICatalog.app */,
+				228DB9F318BC53F1002BA12A /* UIKitCatalog.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,9 +295,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		228DB9F218BC53F1002BA12A /* UICatalog */ = {
+		228DB9F218BC53F1002BA12A /* UIKitCatalog */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 228DBA0B18BC53F1002BA12A /* Build configuration list for PBXNativeTarget "UICatalog" */;
+			buildConfigurationList = 228DBA0B18BC53F1002BA12A /* Build configuration list for PBXNativeTarget "UIKitCatalog" */;
 			buildPhases = (
 				228DB9EF18BC53F1002BA12A /* Sources */,
 				228DB9F018BC53F1002BA12A /* Frameworks */,
@@ -307,9 +307,9 @@
 			);
 			dependencies = (
 			);
-			name = UICatalog;
+			name = UIKitCatalog;
 			productName = UIKitCatalog;
-			productReference = 228DB9F318BC53F1002BA12A /* UICatalog.app */;
+			productReference = 228DB9F318BC53F1002BA12A /* UIKitCatalog.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -340,7 +340,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				228DB9F218BC53F1002BA12A /* UICatalog */,
+				228DB9F218BC53F1002BA12A /* UIKitCatalog */,
 			);
 		};
 /* End PBXProject section */
@@ -779,7 +779,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		228DBA0B18BC53F1002BA12A /* Build configuration list for PBXNativeTarget "UICatalog" */ = {
+		228DBA0B18BC53F1002BA12A /* Build configuration list for PBXNativeTarget "UIKitCatalog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				228DBA0C18BC53F1002BA12A /* Debug */,

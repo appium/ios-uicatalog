@@ -14,6 +14,6 @@ boilerplate({
       iphoneos: relative.iphoneos,
       iphonesimulator: relative.iphonesimulator,
     },
-    appName: 'UICatalog.app',
+    appName: 'UIKitCatalog.app',
   },
 });

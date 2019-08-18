@@ -27,7 +27,7 @@
     "appium",
     "ios",
     "uicatalog",
-    "uikitcatalog"
+    "uicatalog"
   ],
   "os": [
     "darwin"

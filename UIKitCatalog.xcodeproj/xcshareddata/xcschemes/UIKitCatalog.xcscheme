@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "228DB9F218BC53F1002BA12A"
-               BuildableName = "UICatalog.app"
-               BlueprintName = "UICatalog"
+               BuildableName = "UIKitCatalog.app"
+               BlueprintName = "UIKitCatalog"
                ReferencedContainer = "container:UIKitCatalog.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "228DB9F218BC53F1002BA12A"
-            BuildableName = "UICatalog.app"
-            BlueprintName = "UICatalog"
+            BuildableName = "UIKitCatalog.app"
+            BlueprintName = "UIKitCatalog"
             ReferencedContainer = "container:UIKitCatalog.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "228DB9F218BC53F1002BA12A"
-            BuildableName = "UICatalog.app"
-            BlueprintName = "UICatalog"
+            BuildableName = "UIKitCatalog.app"
+            BlueprintName = "UIKitCatalog"
             ReferencedContainer = "container:UIKitCatalog.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -43,8 +43,10 @@ UICatalog demonstrates how to configure and customize the following controls:
 ===========================================================================
 Build/Runtime Requirements
 
-Building this sample requires Xcode 5.0 and iOS 7.0 SDK
-Running the sample requires iOS 7.0 or later.
+Building this sample requires Xcode 9.0 and iOS 9.0 SDK
+Running the sample requires iOS 9.0 or later.
+
+https://developer.apple.com/documentation/uikit/views_and_controls/uikit_catalog_creating_and_customizing_views_and_controls
 
 ===========================================================================
 Copyright (C) 2019 Apple Inc. All rights reserved.
