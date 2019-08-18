@@ -1,7 +1,7 @@
 {
   "name": "ios-uicatalog",
   "version": "2.0.9",
-  "description": "Apple iOS UICatalog app",
+  "description": "Apple iOS UIKitCatalog app",
   "main": "index.js",
   "license": "Apache-2.0",
   "scripts": {
@@ -26,7 +26,8 @@
   "keywords": [
     "appium",
     "ios",
-    "uicatalog"
+    "uicatalog",
+    "uikitcatalog"
   ],
   "os": [
     "darwin"
@@ -34,15 +35,15 @@
   "files": [
     "gulpfile.js",
     "index.js",
-    "uicatalog-info.md",
-    "UICatalog",
-    "UICatalog.xcodeproj"
+    "uikitcatalog-info.md",
+    "UIKitCatalog",
+    "UIKitCatalog.xcodeproj"
   ],
   "author": "",
   "homepage": "https://github.com/appium/ios-uicatalog",
   "dependencies": {
     "appium-gulp-plugins": "^4.0.0",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.2"
   },
   "devDependencies": {
     "ajv": "^6.5.3",
