@@ -4,9 +4,20 @@ node_js: "10"
 matrix:
   include:
     - osx_image: xcode7.3
+      BUILD_DIR: UICatalog/build
+      CMD: install
     - osx_image: xcode8.3
+      BUILD_DIR: UICatalog/build
+      CMD: install
     - osx_image: xcode9.4
+      BUILD_DIR: UICatalog/build
+      CMD: install
     - osx_image: xcode10.2
+      BUILD_DIR: UICatalog/build
+      CMD: install
+    - osx_image: xcode11
+      BUILD_DIR: UIKitCatalog/build
+      CMD: install:ios13
 script:
-  - rm -rf build
-  - npm install
+  - rm -rf $BUILD_DIR
+  - npm run
