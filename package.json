@@ -38,8 +38,14 @@
     "gulpfile.js",
     "index.js",
     "uikitcatalog-info.md",
-    "UIKitCatalog",
-    "UIKitCatalog.xcodeproj"
+    "UICatalog/gulpfile.js",
+    "UICatalog/uicatalog-info.md",
+    "UICatalog/UICatalog",
+    "UICatalog/UICatalog.xcodeproj",
+    "UIKitCatalog/gulpfile.js",
+    "UIKitCatalog/uicatalog-info.md",
+    "UIKitCatalog/UIKitCatalog",
+    "UIKitCatalog/UIKitCatalog.xcodeproj"
   ],
   "author": "",
   "homepage": "https://github.com/appium/ios-uicatalog",
