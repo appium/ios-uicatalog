@@ -8,6 +8,7 @@
     "clean": "rm -rf node_modules && rm -f package-lock.json && npm install",
     "build": "gulp ios-apps:install",
     "install": "gulp ios-apps:install",
+    "install:ios13": "cd UIKitCatalog && gulp ios-apps:install",
     "test": "gulp once",
     "watch": "gulp watch",
     "lint": "gulp lint",
