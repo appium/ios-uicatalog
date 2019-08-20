@@ -19,5 +19,5 @@ matrix:
       BUILD_DIR: UIKitCatalog/build
       CMD: install:ios13
 script:
-  - rm -rf $BUILD_DIR
-  - npm run
+  - rm -rf ${BUILD_DIR}
+  - npm run ${CMD}
