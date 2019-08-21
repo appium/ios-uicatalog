@@ -1,13 +1,15 @@
 {
   "name": "ios-uicatalog",
   "version": "2.0.9",
-  "description": "Apple iOS UICatalog app",
+  "description": "Apple iOS UIKitCatalog app",
   "main": "index.js",
   "license": "Apache-2.0",
   "scripts": {
     "clean": "rm -rf node_modules && rm -f package-lock.json && npm install",
-    "build": "gulp ios-apps:install",
-    "install": "gulp ios-apps:install",
+    "build": "cd UICatalog && gulp ios-apps:install",
+    "build:ios13": "cd UIKitCatalog && gulp ios-apps:install",
+    "install": "cd UICatalog && gulp ios-apps:install",
+    "install:ios13": "cd UIKitCatalog && gulp ios-apps:install",
     "test": "gulp once",
     "watch": "gulp watch",
     "lint": "gulp lint",
@@ -26,6 +28,7 @@
   "keywords": [
     "appium",
     "ios",
+    "uicatalog",
     "uicatalog"
   ],
   "os": [
@@ -34,15 +37,21 @@
   "files": [
     "gulpfile.js",
     "index.js",
-    "uicatalog-info.md",
-    "UICatalog",
-    "UICatalog.xcodeproj"
+    "uikitcatalog-info.md",
+    "UICatalog/gulpfile.js",
+    "UICatalog/uicatalog-info.md",
+    "UICatalog/UICatalog",
+    "UICatalog/UICatalog.xcodeproj",
+    "UIKitCatalog/gulpfile.js",
+    "UIKitCatalog/uicatalog-info.md",
+    "UIKitCatalog/UIKitCatalog",
+    "UIKitCatalog/UIKitCatalog.xcodeproj"
   ],
   "author": "",
   "homepage": "https://github.com/appium/ios-uicatalog",
   "dependencies": {
     "appium-gulp-plugins": "^4.0.0",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.2"
   },
   "devDependencies": {
     "ajv": "^6.5.3",
