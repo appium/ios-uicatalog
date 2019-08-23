@@ -9,7 +9,7 @@
     "build": "npm run build:ios12 && npm run build:ios13",
     "build:ios12": "cd UICatalog && gulp install",
     "build:ios13": "cd UIKitCatalog && gulp install",
-    "install": "npm run build:ios12 && npm run build:ios13",
+    "prepare": "npm run build:ios12 && npm run build:ios13",
     "test": "gulp once",
     "watch": "gulp watch",
     "lint": "gulp lint",
