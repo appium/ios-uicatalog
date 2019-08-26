@@ -2,7 +2,8 @@
 
 const gulp = require('gulp');
 const boilerplate = require('appium-gulp-plugins').boilerplate.use(gulp);
-const { relative } = require('..');
+const path = require('path');
+const { uiCatalog } = require('..');
 
 
 boilerplate({
@@ -11,9 +12,16 @@ boilerplate({
   transpile: false,
   iosApps: {
     relativeLocations: {
-      iphoneos: relative.iphoneos,
-      iphonesimulator: relative.iphonesimulator,
+      iphoneos: path.resolve('..', uiCatalog.relative.iphoneos),
+      iphonesimulator: path.resolve('..', uiCatalog.relative.iphonesimulator),
     },
     appName: 'UICatalog.app',
   },
+});
+
+gulp.task('install', function (done) {
+  return gulp.series('ios-apps:install', (seriesDone) => {
+    seriesDone();
+    done();
+  })();
 });

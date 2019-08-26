@@ -6,10 +6,10 @@
   "license": "Apache-2.0",
   "scripts": {
     "clean": "rm -rf node_modules && rm -f package-lock.json && npm install",
-    "build": "cd UICatalog && gulp ios-apps:install",
-    "build:ios13": "cd UIKitCatalog && gulp ios-apps:install",
-    "install": "cd UICatalog && gulp ios-apps:install",
-    "install:ios13": "cd UIKitCatalog && gulp ios-apps:install",
+    "build": "npm run build:ios12 && npm run build:ios13",
+    "build:ios12": "cd UICatalog && gulp install",
+    "build:ios13": "cd UIKitCatalog && gulp install",
+    "prepare": "npm run build:ios12 && npm run build:ios13",
     "test": "gulp once",
     "watch": "gulp watch",
     "lint": "gulp lint",
@@ -50,12 +50,14 @@
   "author": "",
   "homepage": "https://github.com/appium/ios-uicatalog",
   "dependencies": {
-    "appium-gulp-plugins": "^4.0.0",
+    "appium-gulp-plugins": "^4.2.0",
+    "appium-xcode": "^3.9.0",
+    "fancy-log": "^1.3.3",
     "gulp": "^4.0.2"
   },
   "devDependencies": {
     "ajv": "^6.5.3",
-    "eslint-config-appium": "^4.0.1",
+    "eslint-config-appium": "^4.2.0",
     "pre-commit": "^1.2.2"
   }
 }

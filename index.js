@@ -2,18 +2,31 @@
 
 const path = require('path');
 
-
-const relative = {
-  iphoneos: path.join('build', 'Release-iphoneos', 'UICatalog-iphoneos.app'),
-  iphonesimulator: path.join('build', 'Release-iphonesimulator', 'UICatalog-iphonesimulator.app'),
+const uiCatalog = {
+  relative: {
+    iphoneos: path.join('UICatalog', 'build', 'Release-iphoneos', 'UICatalog-iphoneos.app'),
+    iphonesimulator: path.join('UICatalog', 'build', 'Release-iphonesimulator', 'UICatalog-iphonesimulator.app'),
+  },
+  absolute: {
+    iphoneos: path.resolve(__dirname, 'UICatalog', 'build', 'Release-iphoneos', 'UICatalog-iphoneos.app'),
+    iphonesimulator: path.resolve(__dirname, 'UICatalog', 'build', 'Release-iphonesimulator', 'UICatalog-iphonesimulator.app'),
+  }
 };
 
-const absolute = {
-  iphoneos: path.resolve(__dirname, 'build', 'Release-iphoneos', 'UICatalog-iphoneos.app'),
-  iphonesimulator: path.resolve(__dirname, 'build', 'Release-iphonesimulator', 'UICatalog-iphonesimulator.app'),
+const uiKitCatalog = {
+  relative: {
+    iphoneos: path.join('UIKitCatalog', 'build', 'Release-iphoneos', 'UIKitCatalog-iphoneos.app'),
+    iphonesimulator: path.join('UIKitCatalog', 'build', 'Release-iphonesimulator', 'UIKitCatalog-iphonesimulator.app'),
+  },
+  absolute: {
+    iphoneos: path.resolve(__dirname, 'UIKitCatalog', 'build', 'Release-iphoneos', 'UIKitCatalog-iphoneos.app'),
+    iphonesimulator: path.resolve(__dirname, 'UIKitCatalog', 'build', 'Release-iphonesimulator', 'UIKitCatalog-iphonesimulator.app'),
+  }
 };
+
+
 
 module.exports = {
-  relative,
-  absolute,
+  uiCatalog,
+  uiKitCatalog,
 };
