@@ -148,7 +148,7 @@
                             <outlet property="delegate" destination="Va4-Ge-jQn" id="zrJ-n6-ceD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Alert Controllers" id="9rd-9I-l4O"/>
+                    <navigationItem key="navigationItem" title="Alert Views" id="9rd-9I-l4O"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jc6-Ud-3K5" userLabel="First Responder" sceneMemberID="firstResponder"/>

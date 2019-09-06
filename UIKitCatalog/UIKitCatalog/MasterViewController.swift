@@ -8,7 +8,7 @@ The primary table view controller displaying all the UIKit examples.
 import UIKit
 
 class MasterViewController: BaseTableViewController {
-   
+
 	struct Example {
 		var title: String
 		var subTitle: String
@@ -18,7 +18,7 @@ class MasterViewController: BaseTableViewController {
     var exampleList = [
 		// This is a list of examples offered by this sample.
         Example(title: "Activity Indicators", subTitle: "ActivityIndicatorViewController", twoLevel: false),
-		Example(title: "Alert Controller", subTitle: "AlertControllerViewController", twoLevel: false),
+		Example(title: "Alert Views", subTitle: "AlertControllerViewController", twoLevel: false),
 		Example(title: "Buttons", subTitle: "ButtonViewController", twoLevel: false),
 		Example(title: "Date Picker", subTitle: "DatePickerController", twoLevel: false),
 		Example(title: "Image View", subTitle: "ImageViewController", twoLevel: false),
@@ -47,7 +47,7 @@ class MasterViewController: BaseTableViewController {
 		twoLevelCell = exampleList[indexPath.row].twoLevel
 		return twoLevelCell
 	}
-	
+
 	override func configureCell(cell: UITableViewCell, indexPath: IndexPath) {
 		let splitViewWantsToShowDetail = splitViewController?.traitCollection.horizontalSizeClass == .regular
 		if splitViewWantsToShowDetail {
@@ -61,7 +61,7 @@ class MasterViewController: BaseTableViewController {
 			}
 		}
 	}
-	
+
 }
 
 // MARK: - UITableViewDataSource
@@ -70,7 +70,7 @@ extension MasterViewController {
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return exampleList.count
 	}
-	
+
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 		let example = exampleList[indexPath.row]
@@ -87,6 +87,5 @@ extension MasterViewController {
 		let example = exampleList[indexPath.row]
 		pushOrPresentStoryboard(storyboardName: example.subTitle, cellIndexPath: indexPath)
 	}
-	
-}
 
+}
