@@ -44,6 +44,7 @@
     "UICatalog/UICatalog.xcodeproj",
     "UIKitCatalog/gulpfile.js",
     "UIKitCatalog/uicatalog-info.md",
+    "UIKitCatalog/Configuration",
     "UIKitCatalog/UIKitCatalog",
     "UIKitCatalog/UIKitCatalog.xcodeproj"
   ],
