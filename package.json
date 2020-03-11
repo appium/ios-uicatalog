@@ -42,11 +42,15 @@
     "UICatalog/uicatalog-info.md",
     "UICatalog/UICatalog",
     "UICatalog/UICatalog.xcodeproj",
+    "!UICatalog/UICatalog.xcodeproj/project.xcworkspace/xcuserdata",
+    "!UICatalog/UICatalog.xcodeproj/xcuserdata",
     "UIKitCatalog/gulpfile.js",
     "UIKitCatalog/uicatalog-info.md",
     "UIKitCatalog/Configuration",
     "UIKitCatalog/UIKitCatalog",
-    "UIKitCatalog/UIKitCatalog.xcodeproj"
+    "UIKitCatalog/UIKitCatalog.xcodeproj",
+    "!UIKitCatalog/UIKitCatalog.xcodeproj/project.xcworkspace/xcuserdata",
+    "!UIKitCatalog/UIKitCatalog.xcodeproj/xcuserdata"
   ],
   "author": "",
   "homepage": "https://github.com/appium/ios-uicatalog",
