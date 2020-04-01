@@ -20,7 +20,7 @@ boilerplate({
 });
 
 gulp.task('install', function (done) {
-  return gulp.series('ios-apps:install', (seriesDone) => {
+  return gulp.series('ios-apps:install', function installDone (seriesDone) {
     seriesDone();
     done();
   })();

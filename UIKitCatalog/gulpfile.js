@@ -30,7 +30,7 @@ gulp.task('install', async function (done) {
     log(`Not building ${appName} on Xcode version ${xcodeVersion.versionString}`);
     return done();
   }
-  return gulp.series('ios-apps:install', (seriesDone) => {
+  return gulp.series('ios-apps:install', function installDone (seriesDone) {
     seriesDone();
     done();
   })();
