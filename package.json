@@ -61,7 +61,6 @@
     "gulp": "^4.0.2"
   },
   "devDependencies": {
-    "ajv": "^6.5.3",
     "eslint-config-appium": "^4.2.0",
     "pre-commit": "^1.2.2"
   }
