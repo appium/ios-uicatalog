@@ -29,6 +29,8 @@
 		2200544918BC54F5002A6E8B /* TintedToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543A18BC54F5002A6E8B /* TintedToolbarViewController.swift */; };
 		2200544A18BC54F5002A6E8B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543B18BC54F5002A6E8B /* WebViewController.swift */; };
 		228DBA0818BC53F1002BA12A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228DBA0718BC53F1002BA12A /* Assets.xcassets */; };
+		31CD351B2518AF9800633DA2 /* TouchableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CD35192518AF9800633DA2 /* TouchableView.swift */; };
+		31CD351C2518AF9800633DA2 /* TouchSpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CD351A2518AF9800633DA2 /* TouchSpotView.swift */; };
 		3E5C084E1974991E00969DD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C08501974991E00969DD7 /* Main.storyboard */; };
 		5312D0F222848B0200048DE2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5312D0F022848B0200048DE2 /* Credits.rtf */; };
 		533BD78D1F8BE1A6007D5C3B /* DetailViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533BD78C1F8BE1A6007D5C3B /* DetailViewManager.swift */; };
@@ -88,6 +90,8 @@
 		228DB9F318BC53F1002BA12A /* UIKitCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228DB9F718BC53F1002BA12A /* UIKitCatalog-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIKitCatalog-Info.plist"; sourceTree = "<group>"; };
 		228DBA0718BC53F1002BA12A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		31CD35192518AF9800633DA2 /* TouchableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchableView.swift; path = UIKitCatalog/TouchableView.swift; sourceTree = SOURCE_ROOT; };
+		31CD351A2518AF9800633DA2 /* TouchSpotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchSpotView.swift; path = UIKitCatalog/TouchSpotView.swift; sourceTree = SOURCE_ROOT; };
 		3E5C084F1974991E00969DD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5312D0F122848B0200048DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Base; path = Base.lproj/Credits.rtf; sourceTree = "<group>"; };
 		533BD78C1F8BE1A6007D5C3B /* DetailViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewManager.swift; sourceTree = "<group>"; };
@@ -206,9 +210,19 @@
 			name = Toolbar;
 			sourceTree = "<group>";
 		};
+		311D63E7251381C400CEE586 /* Touch */ = {
+			isa = PBXGroup;
+			children = (
+				31CD35192518AF9800633DA2 /* TouchableView.swift */,
+				31CD351A2518AF9800633DA2 /* TouchSpotView.swift */,
+			);
+			path = Touch;
+			sourceTree = "<group>";
+		};
 		3E1DA7601931CC99000114A9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				311D63E7251381C400CEE586 /* Touch */,
 				2200541A18BC54E8002A6E8B /* ActivityIndicatorViewController.swift */,
 				539C6BA81F27F4980006C5A9 /* ActivityIndicatorViewController.storyboard */,
 				2200541B18BC54E8002A6E8B /* AlertControllerViewController.swift */,
@@ -402,11 +416,13 @@
 				2200544618BC54F5002A6E8B /* SwitchViewController.swift in Sources */,
 				533BD7971F8BF8B0007D5C3B /* BaseTableViewController.swift in Sources */,
 				B50F41081B1D284700E5147D /* StackViewController.swift in Sources */,
+				31CD351C2518AF9800633DA2 /* TouchSpotView.swift in Sources */,
 				2200544118BC54F5002A6E8B /* ProgressViewController.swift in Sources */,
 				2200544718BC54F5002A6E8B /* TextFieldViewController.swift in Sources */,
 				2200544818BC54F5002A6E8B /* TextViewController.swift in Sources */,
 				2200542B18BC54EC002A6E8B /* DefaultSearchBarViewController.swift in Sources */,
 				2200544518BC54F5002A6E8B /* StepperViewController.swift in Sources */,
+				31CD351B2518AF9800633DA2 /* TouchableView.swift in Sources */,
 				2200542818BC54EC002A6E8B /* CustomSearchBarViewController.swift in Sources */,
 				533BD7BC1F8D2B08007D5C3B /* SearchBarsTableViewController.swift in Sources */,
 				2200542918BC54EC002A6E8B /* CustomToolbarViewController.swift in Sources */,

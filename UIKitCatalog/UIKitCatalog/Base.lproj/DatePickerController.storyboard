@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Xn-ho-KP8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Xn-ho-KP8">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,14 +24,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNR-UR-gYJ" customClass="TouchableView" customModule="UIKitCatalog" customModuleProvider="target">
+                                <rect key="frame" x="67" y="89" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <accessibility key="accessibilityConfiguration" identifier="TouchableView"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kak-Eg-yJq">
+                                <rect key="frame" x="16" y="498" width="343" height="20.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="touchesLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7k-mI-N9T">
+                                <rect key="frame" x="16" y="469" width="343" height="20.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tapsLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="02B-Y8-Hxk" firstAttribute="top" secondItem="ebB-3n-o8C" secondAttribute="bottom" id="An0-A4-IS5"/>
+                            <constraint firstItem="ebB-3n-o8C" firstAttribute="top" secondItem="sNR-UR-gYJ" secondAttribute="bottom" constant="8.5" id="DUy-nt-dR9"/>
+                            <constraint firstItem="q7k-mI-N9T" firstAttribute="top" secondItem="02B-Y8-Hxk" secondAttribute="bottom" constant="7" id="Ew8-ph-hW8"/>
                             <constraint firstAttribute="leadingMargin" secondItem="02B-Y8-Hxk" secondAttribute="leading" id="Gik-bp-oJf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="02B-Y8-Hxk" secondAttribute="trailing" id="Mif-nA-opd"/>
+                            <constraint firstItem="q7k-mI-N9T" firstAttribute="leading" secondItem="qI8-L8-DCK" secondAttribute="leading" constant="16" id="NDZ-G6-nRO"/>
+                            <constraint firstItem="kak-Eg-yJq" firstAttribute="top" secondItem="q7k-mI-N9T" secondAttribute="bottom" constant="8.5" id="SZC-g5-6BF"/>
+                            <constraint firstItem="qI8-L8-DCK" firstAttribute="trailing" secondItem="sNR-UR-gYJ" secondAttribute="trailing" constant="68" id="SsI-9t-iHa"/>
+                            <constraint firstItem="qI8-L8-DCK" firstAttribute="trailing" secondItem="kak-Eg-yJq" secondAttribute="trailing" constant="16" id="XJE-dT-X4F"/>
                             <constraint firstItem="ebB-3n-o8C" firstAttribute="centerY" secondItem="LFl-gd-u3P" secondAttribute="centerY" id="iLb-96-Kao"/>
+                            <constraint firstItem="kak-Eg-yJq" firstAttribute="leading" secondItem="qI8-L8-DCK" secondAttribute="leading" constant="16" id="miW-Gb-c7s"/>
+                            <constraint firstItem="sNR-UR-gYJ" firstAttribute="leading" secondItem="qI8-L8-DCK" secondAttribute="leading" constant="67" id="nSb-p2-Q53"/>
+                            <constraint firstItem="qI8-L8-DCK" firstAttribute="trailing" secondItem="q7k-mI-N9T" secondAttribute="trailing" constant="16" id="qtL-Ro-Erk"/>
                             <constraint firstItem="ebB-3n-o8C" firstAttribute="centerX" secondItem="qI8-L8-DCK" secondAttribute="centerX" id="tvU-Ae-9RL"/>
+                            <constraint firstItem="sNR-UR-gYJ" firstAttribute="top" secondItem="qI8-L8-DCK" secondAttribute="top" constant="45" id="v7j-9y-dvR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qI8-L8-DCK"/>
                     </view>
@@ -40,6 +69,9 @@
                     <connections>
                         <outlet property="dateLabel" destination="02B-Y8-Hxk" id="dzo-fF-tBd"/>
                         <outlet property="datePicker" destination="ebB-3n-o8C" id="jzR-uA-bOS"/>
+                        <outlet property="tapsLabel" destination="q7k-mI-N9T" id="PYe-vs-qTT"/>
+                        <outlet property="touchableView" destination="sNR-UR-gYJ" id="9t5-pp-br4"/>
+                        <outlet property="touchesLabel" destination="kak-Eg-yJq" id="AuB-wH-Q5k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UIz-m3-LkY" userLabel="First Responder" sceneMemberID="firstResponder"/>

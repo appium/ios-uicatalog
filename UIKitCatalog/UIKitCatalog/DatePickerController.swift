@@ -7,12 +7,19 @@ A view controller that demonstrates how to use `UIDatePicker`.
 
 import UIKit
 
-class DatePickerController: UIViewController {
+class DatePickerController: UIViewController, TouchableViewDelegate {
+    
     // MARK: - Properties
 
     @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var tapsLabel: UILabel!
+    
+    @IBOutlet weak var touchesLabel: UILabel!
+    
+    @IBOutlet weak var touchableView: TouchableView!
     
     // A date formatter to format the `date` property of `datePicker`.
     lazy var dateFormatter: DateFormatter = {
@@ -30,6 +37,7 @@ class DatePickerController: UIViewController {
         super.viewDidLoad()
 
         configureDatePicker()
+        touchableView.delegate = self
     }
 
     // MARK: - Configuration
@@ -61,5 +69,14 @@ class DatePickerController: UIViewController {
     @objc
     func updateDatePickerLabel() {
         dateLabel.text = dateFormatter.string(from: datePicker.date)
+    }
+    
+    func shouldHandleTouchesNumber(_ touchesCount: Int) {
+        touchesLabel.text = "\(touchesCount)"
+    }
+    
+    func shouldHandleTapsNumber(_ numberOfTaps: Int) {
+        tapsLabel.text = "\(numberOfTaps)"
+        
     }
 }
