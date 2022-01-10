@@ -55,13 +55,13 @@
   "author": "",
   "homepage": "https://github.com/appium/ios-uicatalog",
   "dependencies": {
-    "appium-gulp-plugins": "^5.0.0",
+    "@appium/gulp-plugins": "^5.0.0",
     "appium-xcode": "^3.9.0",
     "fancy-log": "^2.0.0",
     "gulp": "^4.0.2"
   },
   "devDependencies": {
-    "eslint-config-appium": "^4.2.0",
+    "@appium/eslint-config-appium": "^4.2.0",
     "pre-commit": "^1.2.2"
   }
 }
