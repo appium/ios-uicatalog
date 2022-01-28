@@ -56,7 +56,7 @@
   "homepage": "https://github.com/appium/ios-uicatalog",
   "dependencies": {
     "appium-gulp-plugins": "^5.0.0",
-    "appium-xcode": "^3.9.0",
+    "appium-xcode": "^4.0.0",
     "fancy-log": "^2.0.0",
     "gulp": "^4.0.2"
   },
