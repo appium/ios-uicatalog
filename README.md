@@ -86,3 +86,11 @@ npm run watch
 ```
 npm test
 ```
+
+## `webView.isInspectable`
+
+Since iOS 16.4, the `WKWebView` insatnce needs to enable `isInspectable` to make WebView available.
+The sample app enables it.
+
+
+

@@ -23,6 +23,10 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if #available(macOS 13.3, iOS 16.4, tvOS 16.4, *) {
+            webView.isInspectable = true
+        }
+
         // So we can capture failures in "didFailProvisionalNavigation".
         webView.navigationDelegate = self
         loadAddressURL()
