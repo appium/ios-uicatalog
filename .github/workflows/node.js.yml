@@ -17,7 +17,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: lts/*
-        cache: 'npm'
     - name: Select Xcode ${{ matrix.xcode-version }}
       run: sudo xcode-select --switch /Applications/Xcode_${{ matrix.xcode-version }}.app
     - run: rm -rf UICatalog/build UIKitCatalog/build
