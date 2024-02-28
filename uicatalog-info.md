@@ -1,6 +1,7 @@
 UICatalog: Creating and Customizing UIKit Controls
 ===========================================================================
 
+
 This sample is a catalog exhibiting many views and controls in the UIKit framework along with their various functionalities. Refer to this sample if you are looking for specific controls or views that are provided by the system.
 
 Note that this sample also shows you how to make your non-standard views (images or custom views) accessible. Using the iOS Accessibility API enhances the user experience of VoiceOver users.
