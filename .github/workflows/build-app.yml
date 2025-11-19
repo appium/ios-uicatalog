@@ -61,7 +61,7 @@ jobs:
         run: rm -rf UIKitCatalog/build
 
       - name: Build iOS App for Simulator
-        run: npm run build
+        run: npm run build:uicatalog:simulator
 
       - name: Create ZIP archive
         run: |

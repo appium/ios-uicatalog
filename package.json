@@ -6,8 +6,10 @@
   "license": "Apache-2.0",
   "scripts": {
     "clean": "rm -rf node_modules && rm -f package-lock.json && npm install",
-    "clean:uicatalog": "(cd UIKitCatalog && xcodebuild -project UIKitCatalog.xcodeproj -scheme UIKitCatalog -sdk iphonesimulator -configuration Release clean)",
-    "build:uicatalog": "(cd UIKitCatalog && xcodebuild -project UIKitCatalog.xcodeproj -scheme UIKitCatalog -sdk iphonesimulator -configuration Release build)",
+    "clean:uicatalog:simulator": "(cd UIKitCatalog && xcodebuild -project UIKitCatalog.xcodeproj -scheme UIKitCatalog -sdk iphonesimulator -configuration Release -derivedDataPath build clean)",
+    "build:uicatalog:simulator": "(cd UIKitCatalog && xcodebuild -project UIKitCatalog.xcodeproj -scheme UIKitCatalog -sdk iphonesimulator -configuration Release -derivedDataPath build build)",
+    "clean:uicatalog:real": "(cd UIKitCatalog && xcodebuild -project UIKitCatalog.xcodeproj -scheme UIKitCatalog -sdk iphoneos -configuration Release -derivedDataPath build clean)",
+    "build:uicatalog:real": "(cd UIKitCatalog && xcodebuild -project UIKitCatalog.xcodeproj -scheme UIKitCatalog -sdk iphoneos -configuration Release -derivedDataPath build build)",
     "bump-xcode-version": "node ./scripts/xcode-version-update.mjs --package-version=${npm_package_version} && git add UIKitCatalog/UIKitCatalog.xcodeproj/project.pbxproj",
     "version": "npm run bump-xcode-version",
     "lint": "eslint .",
@@ -20,7 +22,6 @@
   "keywords": [
     "appium",
     "ios",
-    "uicatalog",
     "uicatalog"
   ],
   "os": [
