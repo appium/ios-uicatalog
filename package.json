@@ -6,21 +6,13 @@
   "license": "Apache-2.0",
   "scripts": {
     "clean": "rm -rf node_modules && rm -f package-lock.json && npm install",
-    "build": "npm run build:ios12 && npm run build:ios13",
-    "build:ios12": "cd UICatalog && gulp install",
-    "build:ios13": "cd UIKitCatalog && gulp install",
-    "install": "npm run build:ios12 && npm run build:ios13",
-    "test": "gulp once",
-    "watch": "gulp watch",
-    "lint": "gulp lint",
-    "lint:fix": "gulp lint --fix",
-    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
-    "precommit-test": "gulp lint"
+    "clean:uicatalog": "(cd UIKitCatalog && xcodebuild -project UIKitCatalog.xcodeproj -scheme UIKitCatalog -sdk iphonesimulator -configuration Release clean)",
+    "build:uicatalog": "(cd UIKitCatalog && xcodebuild -project UIKitCatalog.xcodeproj -scheme UIKitCatalog -sdk iphonesimulator -configuration Release build)",
+    "bump-xcode-version": "node ./scripts/xcode-version-update.mjs --package-version=${npm_package_version} && git add UIKitCatalog/UIKitCatalog.xcodeproj/project.pbxproj",
+    "version": "npm run bump-xcode-version",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix"
   },
-  "pre-commit": [
-    "precommit-msg",
-    "precommit-test"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/appium/ios-uicatalog.git"
@@ -35,16 +27,8 @@
     "darwin"
   ],
   "files": [
-    "gulpfile.js",
     "index.js",
-    "uikitcatalog-info.md",
-    "UICatalog/gulpfile.js",
-    "UICatalog/uicatalog-info.md",
-    "UICatalog/UICatalog",
-    "UICatalog/UICatalog.xcodeproj",
-    "!UICatalog/UICatalog.xcodeproj/project.xcworkspace/xcuserdata",
-    "!UICatalog/UICatalog.xcodeproj/xcuserdata",
-    "UIKitCatalog/gulpfile.js",
+    "CHANGELOG.md",
     "UIKitCatalog/uicatalog-info.md",
     "UIKitCatalog/Configuration",
     "UIKitCatalog/UIKitCatalog",
@@ -52,16 +36,23 @@
     "!UIKitCatalog/UIKitCatalog.xcodeproj/project.xcworkspace/xcuserdata",
     "!UIKitCatalog/UIKitCatalog.xcodeproj/xcuserdata"
   ],
-  "author": "",
+  "author": "Appium Contributors",
+  "bugs": {
+    "url": "https://github.com/appium/ios-uicatalog/issues"
+  },
   "homepage": "https://github.com/appium/ios-uicatalog",
+  "engines": {
+    "node": "^20.19.0 || ^22.12.0 || >=24.0.0",
+    "npm": ">=10"
+  },
   "dependencies": {
-    "appium-gulp-plugins": "^5.0.0",
-    "appium-xcode": "^5.0.0",
-    "fancy-log": "^2.0.0",
-    "gulp": "^4.0.2"
   },
   "devDependencies": {
-    "eslint-config-appium": "^4.2.0",
-    "pre-commit": "^1.2.2"
+    "@appium/eslint-config-appium-ts": "^2.0.0-rc.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "conventional-changelog-conventionalcommits": "^7.0.0",
+    "semantic-release": "^25.0.0",
+    "semver": "^7.3.7"
   }
 }
