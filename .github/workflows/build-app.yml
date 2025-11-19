@@ -65,9 +65,17 @@ jobs:
 
       - name: Create ZIP archive
         run: |
-          cwd=$(pwd)
-          cd UIKitCatalog/build/Release-iphonesimulator
-          zip -r "${cwd}/UIKitCatalog-iphonesimulator.zip" UIKitCatalog-iphonesimulator.app
+          APP_PATH="UIKitCatalog/build/Build/Products/Release-iphonesimulator/UIKitCatalog.app"
+          if [ ! -d "$APP_PATH" ]; then
+            echo "Error: App not found at $APP_PATH"
+            echo "Build directory structure:"
+            find UIKitCatalog/build -type d 2>/dev/null | head -20
+            exit 1
+          fi
+          WORKSPACE_ROOT=$(pwd)
+          cd UIKitCatalog/build/Build/Products/Release-iphonesimulator
+          zip -r "UIKitCatalog-iphonesimulator.zip" "UIKitCatalog.app"
+          mv "UIKitCatalog-iphonesimulator.zip" "$WORKSPACE_ROOT/"
 
       - name: Upload iOS App as Artifact
         if: inputs.upload_pr_artifacts == true
