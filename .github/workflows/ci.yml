@@ -1,0 +1,14 @@
+name: CI
+on: pull_request
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    uses: ./.github/workflows/build-app.yml
+    with:
+      upload_release_artifacts: false
+      upload_pr_artifacts: ${{ github.event_name == 'pull_request' }}
+      run_lint: true
