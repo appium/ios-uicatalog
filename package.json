@@ -1,6 +1,6 @@
 {
   "name": "ios-uicatalog",
-  "version": "3.8.0",
+  "version": "4.0.0",
   "description": "Apple iOS UIKitCatalog app",
   "main": "index.js",
   "license": "Apache-2.0",
@@ -43,8 +43,7 @@
     "node": "^20.19.0 || ^22.12.0 || >=24.0.0",
     "npm": ">=10"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@appium/eslint-config-appium-ts": "^2.0.0-rc.1",
     "@semantic-release/changelog": "^6.0.3",
