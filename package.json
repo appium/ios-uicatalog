@@ -24,9 +24,6 @@
     "ios",
     "uicatalog"
   ],
-  "os": [
-    "darwin"
-  ],
   "files": [
     "index.js",
     "CHANGELOG.md",
