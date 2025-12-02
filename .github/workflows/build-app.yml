@@ -45,8 +45,18 @@ jobs:
         with:
           node-version: 'lts/*'
 
+      - uses: SocketDev/action@v1
+        if: inputs.run_lint == true
+        with:
+          mode: firewall-free
+
       - name: Install dependencies
+        if: inputs.run_lint != true
         run: npm install
+
+      - name: Install dependencies
+        if: inputs.run_lint == true
+        run: sfw npm install
 
       - name: Run lint
         if: inputs.run_lint == true
