@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## <small>4.0.2 (2026-01-28)</small>
+
+* chore(deps-dev): bump @appium/eslint-config-appium-ts from 2.0.5 to 3.0.0 (#42) ([08a2e47](https://github.com/appium/ios-uicatalog/commit/08a2e47)), closes [#42](https://github.com/appium/ios-uicatalog/issues/42)
+* ci: Use shared workflows (#40) ([dde5bfa](https://github.com/appium/ios-uicatalog/commit/dde5bfa)), closes [#40](https://github.com/appium/ios-uicatalog/issues/40)
+* ci(deps): bump actions/checkout from 5 to 6 (#39) ([6a9866c](https://github.com/appium/ios-uicatalog/commit/6a9866c)), closes [#39](https://github.com/appium/ios-uicatalog/issues/39)
+* ci(deps): bump actions/upload-artifact from 5 to 6 (#41) ([668d184](https://github.com/appium/ios-uicatalog/commit/668d184)), closes [#41](https://github.com/appium/ios-uicatalog/issues/41)
+
 ## <small>4.0.1 (2025-11-20)</small>
 
 * ci(deps): bump cycjimmy/semantic-release-action from 5 to 6 (#36) ([81bacbb](https://github.com/appium/ios-uicatalog/commit/81bacbb)), closes [#36](https://github.com/appium/ios-uicatalog/issues/36)
