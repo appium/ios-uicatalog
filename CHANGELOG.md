@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## <small>4.0.4 (2026-07-01)</small>
+
+* chore: downgrade conventional-changelog-conventionalcommits to v9 (#47) ([96bec3d](https://github.com/appium/ios-uicatalog/commit/96bec3d)), closes [#47](https://github.com/appium/ios-uicatalog/issues/47)
+
 ## <small>4.0.3 (2026-06-29)</small>
 
 * ci(deps): bump actions/checkout from 6 to 7 (#45) ([c386f3b](https://github.com/appium/ios-uicatalog/commit/c386f3b)), closes [#45](https://github.com/appium/ios-uicatalog/issues/45)
