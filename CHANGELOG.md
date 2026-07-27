@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.0.5](https://github.com/appium/ios-uicatalog/compare/v4.0.4...v4.0.5) (2026-07-27)
+
+### Miscellaneous Chores
+
+* Integrate oxc and release configs ([#55](https://github.com/appium/ios-uicatalog/issues/55)) ([65bb488](https://github.com/appium/ios-uicatalog/commit/65bb488f170a020aeff298f3c6d6a942d4ed2bbf))
+
 ## <small>4.0.4 (2026-07-01)</small>
 
 * chore: downgrade conventional-changelog-conventionalcommits to v9 (#47) ([96bec3d](https://github.com/appium/ios-uicatalog/commit/96bec3d)), closes [#47](https://github.com/appium/ios-uicatalog/issues/47)
