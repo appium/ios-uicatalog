@@ -2,28 +2,21 @@
   "name": "ios-uicatalog",
   "version": "4.0.4",
   "description": "Apple iOS UIKitCatalog app",
-  "main": "index.js",
-  "license": "Apache-2.0",
-  "scripts": {
-    "clean": "rm -rf node_modules && rm -f package-lock.json && npm install",
-    "clean:uicatalog:simulator": "(cd UIKitCatalog && xcodebuild -project UIKitCatalog.xcodeproj -scheme UIKitCatalog -sdk iphonesimulator -configuration Release -derivedDataPath build clean)",
-    "build:uicatalog:simulator": "(cd UIKitCatalog && xcodebuild -project UIKitCatalog.xcodeproj -scheme UIKitCatalog -sdk iphonesimulator -configuration Release -derivedDataPath build build)",
-    "clean:uicatalog:real": "(cd UIKitCatalog && xcodebuild -project UIKitCatalog.xcodeproj -scheme UIKitCatalog -sdk iphoneos -configuration Release -derivedDataPath build clean)",
-    "build:uicatalog:real": "(cd UIKitCatalog && xcodebuild -project UIKitCatalog.xcodeproj -scheme UIKitCatalog -sdk iphoneos -configuration Release -derivedDataPath build build)",
-    "bump-xcode-version": "node ./scripts/xcode-version-update.mjs --package-version=${npm_package_version} && git add UIKitCatalog/UIKitCatalog.xcodeproj/project.pbxproj",
-    "version": "npm run bump-xcode-version",
-    "lint": "eslint .",
-    "lint:fix": "npm run lint -- --fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/appium/ios-uicatalog.git"
-  },
   "keywords": [
     "appium",
     "ios",
     "uicatalog"
   ],
+  "homepage": "https://github.com/appium/ios-uicatalog",
+  "bugs": {
+    "url": "https://github.com/appium/ios-uicatalog/issues"
+  },
+  "license": "Apache-2.0",
+  "author": "Appium Contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appium/ios-uicatalog.git"
+  },
   "files": [
     "index.js",
     "CHANGELOG.md",
@@ -34,22 +27,28 @@
     "!UIKitCatalog/UIKitCatalog.xcodeproj/project.xcworkspace/xcuserdata",
     "!UIKitCatalog/UIKitCatalog.xcodeproj/xcuserdata"
   ],
-  "author": "Appium Contributors",
-  "bugs": {
-    "url": "https://github.com/appium/ios-uicatalog/issues"
-  },
-  "homepage": "https://github.com/appium/ios-uicatalog",
-  "engines": {
-    "node": "^20.19.0 || ^22.12.0 || >=24.0.0",
-    "npm": ">=10"
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf node_modules && rm -f package-lock.json && npm install",
+    "clean:uicatalog:simulator": "(cd UIKitCatalog && xcodebuild -project UIKitCatalog.xcodeproj -scheme UIKitCatalog -sdk iphonesimulator -configuration Release -derivedDataPath build clean)",
+    "build:uicatalog:simulator": "(cd UIKitCatalog && xcodebuild -project UIKitCatalog.xcodeproj -scheme UIKitCatalog -sdk iphonesimulator -configuration Release -derivedDataPath build build)",
+    "clean:uicatalog:real": "(cd UIKitCatalog && xcodebuild -project UIKitCatalog.xcodeproj -scheme UIKitCatalog -sdk iphoneos -configuration Release -derivedDataPath build clean)",
+    "build:uicatalog:real": "(cd UIKitCatalog && xcodebuild -project UIKitCatalog.xcodeproj -scheme UIKitCatalog -sdk iphoneos -configuration Release -derivedDataPath build build)",
+    "bump-xcode-version": "node ./scripts/xcode-version-update.mjs --package-version=${npm_package_version} && git add UIKitCatalog/UIKitCatalog.xcodeproj/project.pbxproj",
+    "version": "npm run bump-xcode-version",
+    "lint": "oxlint -c oxlint.config.mjs .",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "oxfmt -c oxfmt.config.mjs .",
+    "format:check": "oxfmt -c oxfmt.config.mjs --check ."
   },
   "dependencies": {},
   "devDependencies": {
-    "@appium/eslint-config-appium-ts": "^3.0.0",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "conventional-changelog-conventionalcommits": "^9.3.1",
-    "semantic-release": "^25.0.0",
+    "@appium/oxc-config": "^1.1.0",
+    "@appium/semantic-release-config": "^1.1.0",
     "semver": "^7.3.7"
+  },
+  "engines": {
+    "node": "^20.19.0 || ^22.12.0 || >=24.0.0",
+    "npm": ">=10"
   }
 }
