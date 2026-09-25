@@ -1,5 +1,7 @@
 # ios-uicatalog
 
+> **This repository has moved.** Development now continues in the [appium-ios monorepo](https://github.com/appium/appium-ios/tree/main/packages/uicatalog).
+
 A simple test application for iOS, used by [Appium](https://github.com/appium/appium)
 for certain tests. For more information, see the [docs for UIKitCatalog](./UIKitCatalog/uicatalog-info.md)
 
